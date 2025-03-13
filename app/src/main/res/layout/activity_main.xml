@@ -1,0 +1,89 @@
+ <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="Aya Rami Ghanem"
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="Linear Layout (Without Weight)"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+
+
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/green"
+        android:text="BUTTON 1"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        app:backgroundTintMode="add"
+        android:textStyle="bold"
+        />
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/yellow"
+        android:text="BUTTON 2"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        app:backgroundTintMode="add"
+        android:textStyle="bold"
+        />
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue"
+        android:text="BUTTON 3"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        app:backgroundTintMode="add"
+        android:textStyle="bold"
+        />
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/pink"
+        android:text="BUTTON 4"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        app:backgroundTintMode="add"
+        android:textStyle="bold"
+        />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="40dp"
+        android:text="Linear Layout UI"
+        android:textColor="@color/green"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+</LinearLayout>
