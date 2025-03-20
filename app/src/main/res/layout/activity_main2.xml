@@ -1,0 +1,320 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <!-- Header -->
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:background="#212121"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:id="@+id/profile_image"
+            android:layout_width="55dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/personal"
+            android:scaleType="centerCrop"
+            android:src="@drawable/personal" />
+
+        <TextView
+            android:id="@+id/open_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Open"
+            android:layout_toEndOf="@id/profile_image"
+            android:layout_marginLeft="40dp"
+            android:textColor="@color/white"
+            android:textSize="26sp"
+            android:layout_centerInParent="true" />
+
+        <ImageView
+            android:id="@+id/dimon_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="100dp"
+            android:src="@drawable/add"
+            android:layout_toEndOf="@id/open_text"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:id="@+id/plus_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/pluse"
+            android:layout_toEndOf="@id/dimon_image"
+            android:scaleType="centerCrop" />
+    </RelativeLayout>
+
+    <!-- Body -->
+    <RelativeLayout
+        android:id="@+id/body"
+        android:layout_width="match_parent"
+        android:layout_height="550dp"
+        android:layout_below="@id/header"
+        android:background="@color/black">
+
+        <TextView
+            android:id="@+id/place"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Places"
+            android:textColor="#8F8989"
+            android:textSize="24sp"
+            android:padding="10dp" />
+
+        <!-- Recent -->
+        <RelativeLayout
+            android:id="@+id/recent_section"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/place"
+
+            android:layout_marginBottom="15dp">
+
+            <ImageView
+                android:id="@+id/recent_icon"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/time" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Recent"
+                android:textColor="@color/lightGray"
+                android:textSize="20sp"
+                android:layout_toEndOf="@id/recent_icon"
+                android:layout_marginStart="20dp" />
+        </RelativeLayout>
+
+
+        <!-- Shared with me -->
+        <RelativeLayout
+            android:id="@+id/shared_section"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/recent_section"
+            android:layout_marginBottom="15dp">
+
+            <ImageView
+                android:id="@+id/shared_icon"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/all" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Shared with me"
+                android:textColor="@color/lightGray"
+                android:textSize="20sp"
+                android:layout_toEndOf="@id/shared_icon"
+                android:layout_marginStart="20dp" />
+        </RelativeLayout>
+
+
+        <!-- This device -->
+        <RelativeLayout
+            android:id="@+id/device_section"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/shared_section"
+            android:layout_marginBottom="15dp">
+
+            <ImageView
+                android:id="@+id/device_icon"
+                android:layout_width="45dp"
+                android:layout_marginLeft="15dp"
+                android:layout_height="45dp"
+                android:src="@drawable/phone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="This device"
+                android:textColor="@color/lightGray"
+                android:textSize="20sp"
+                android:layout_toEndOf="@id/device_icon"
+                android:layout_marginStart="20dp" />
+        </RelativeLayout>
+
+        <!-- Browse -->
+        <RelativeLayout
+            android:id="@+id/browse_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/device_section"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp">
+
+            <ImageView
+                android:id="@+id/browse_icon"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="15dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:src="@drawable/cloud" />
+
+            <TextView
+                android:id="@+id/browse_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/browse_icon"
+                android:text="Browse"
+                android:textColor="@color/lightGray"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/browse_icon"
+                android:layout_alignStart="@id/browse_text"
+                android:layout_marginTop="5dp"
+                android:text="Google Drive, SD card, and more..."
+                android:textColor="#A3A0A0"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <!-- Add a place -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/browse_section"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp">
+
+            <ImageView
+                android:id="@+id/add_place_icon"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:src="@drawable/pluse" />
+
+            <TextView
+                android:id="@+id/add_place_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/add_place_icon"
+                android:text="Add a place"
+                android:textColor="@color/lightGray"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/add_place_icon"
+                android:layout_alignStart="@id/add_place_text"
+                android:text="Connect to cloud storage"
+                android:textColor="#A3A0A0"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+    <!-- Footer -->
+    <RelativeLayout
+        android:id="@+id/footer_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#212121"
+        android:padding="8dp"
+        android:layout_below="@+id/body">
+
+
+        <!-- Recent Section (Center) -->
+        <RelativeLayout
+            android:id="@+id/recentCenter_section"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+
+            <ImageView
+                android:id="@+id/recentCenter_icon"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/time2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/recentCenter_icon"
+                android:layout_centerHorizontal="true"
+                android:text="Recent"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <!-- Shared Section (Left) -->
+        <RelativeLayout
+            android:id="@+id/sharedLeft_section"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true">
+
+            <ImageView
+                android:id="@+id/sharedLeft_icon"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/all" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sharedLeft_icon"
+                android:layout_centerHorizontal="true"
+                android:text="Shared"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <!-- Open Section (Right) -->
+        <RelativeLayout
+            android:id="@+id/open_section"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true">
+
+            <ImageView
+                android:id="@+id/openRight_icon"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/file" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/openRight_icon"
+                android:layout_centerHorizontal="true"
+                android:text="Open"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

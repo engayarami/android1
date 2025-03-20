@@ -6,4 +6,6 @@
     <color name="yellow">#FFFFD700</color>
     <color name="blue">#FF0000FF</color>
     <color name="pink">#FFFF00FF</color>
+    <color name="lightGray">#EAE4EA</color>
+
 </resources>
