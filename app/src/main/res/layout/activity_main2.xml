@@ -7,6 +7,7 @@
     <!-- Header -->
     <RelativeLayout
         android:id="@+id/header"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="5dp"
@@ -15,11 +16,14 @@
 
         <ImageView
             android:id="@+id/profile_image"
-            android:layout_width="55dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="10dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
             android:background="@drawable/personal"
-            android:scaleType="centerCrop"
+            android:layout_alignParentStart="true"
+
             android:src="@drawable/personal" />
 
         <TextView
@@ -29,24 +33,30 @@
             android:text="Open"
             android:layout_toEndOf="@id/profile_image"
             android:layout_marginLeft="40dp"
+            android:layout_marginTop="20dp"
             android:textColor="@color/white"
             android:textSize="26sp"
+            android:textStyle="bold"
             android:layout_centerInParent="true" />
 
         <ImageView
             android:id="@+id/dimon_image"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="100dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="120dp"
             android:src="@drawable/add"
+
+            android:layout_marginTop="20dp"
             android:layout_toEndOf="@id/open_text"
             android:scaleType="centerCrop" />
 
         <ImageView
             android:id="@+id/plus_image"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="10dp"
+            android:layout_width="30dp"
+
+            android:layout_marginTop="20dp"
+            android:layout_height="30dp"
+           android:layout_marginLeft="40dp"
             android:src="@drawable/pluse"
             android:layout_toEndOf="@id/dimon_image"
             android:scaleType="centerCrop" />
@@ -65,9 +75,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Places"
+            android:layout_marginLeft="18dp"
             android:textColor="#8F8989"
             android:textSize="24sp"
-            android:padding="10dp" />
+            android:padding="10dp"
+            android:layout_marginBottom="20dp"/>
 
         <!-- Recent -->
         <RelativeLayout
@@ -76,13 +88,13 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/place"
 
-            android:layout_marginBottom="15dp">
+            android:layout_marginBottom="30dp">
 
             <ImageView
                 android:id="@+id/recent_icon"
-                android:layout_width="45dp"
-                android:layout_height="45dp"
-                android:layout_marginLeft="15dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="50dp"
                 android:src="@drawable/time" />
 
             <TextView
@@ -102,13 +114,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/recent_section"
-            android:layout_marginBottom="15dp">
+            android:layout_marginBottom="35dp">
 
             <ImageView
                 android:id="@+id/shared_icon"
-                android:layout_width="45dp"
-                android:layout_height="45dp"
-                android:layout_marginLeft="15dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="50dp"
                 android:src="@drawable/all" />
 
             <TextView
@@ -128,13 +140,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/shared_section"
-            android:layout_marginBottom="15dp">
+            android:layout_marginBottom="35dp">
 
             <ImageView
                 android:id="@+id/device_icon"
-                android:layout_width="45dp"
-                android:layout_marginLeft="15dp"
-                android:layout_height="45dp"
+                android:layout_width="35dp"
+                android:layout_marginLeft="50dp"
+                android:layout_height="35dp"
                 android:src="@drawable/phone" />
 
             <TextView
@@ -153,27 +165,29 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/device_section"
-            android:layout_marginStart="10dp"
+
             android:layout_marginEnd="10dp"
-            android:layout_marginBottom="10dp">
+
+            >
 
             <ImageView
                 android:id="@+id/browse_icon"
-                android:layout_width="45dp"
-                android:layout_height="45dp"
-                android:layout_marginLeft="15dp"
-                android:layout_alignParentStart="true"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="20dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="50dp"
+
+                android:layout_marginTop="10dp"
                 android:src="@drawable/cloud" />
 
             <TextView
                 android:id="@+id/browse_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
+
                 android:layout_toEndOf="@id/browse_icon"
-                android:text="Browse"
+                android:text="Browse
+"
+                android:layout_marginLeft="25dp"
                 android:textColor="@color/lightGray"
                 android:textSize="20sp" />
 
@@ -182,7 +196,9 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/browse_icon"
                 android:layout_alignStart="@id/browse_text"
-                android:layout_marginTop="5dp"
+
+
+
                 android:text="Google Drive, SD card, and more..."
                 android:textColor="#A3A0A0"
                 android:textSize="18sp" />
@@ -193,26 +209,25 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/browse_section"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginEnd="15dp"
+
+            android:layout_marginTop="20dp"
             android:layout_marginBottom="15dp">
 
             <ImageView
                 android:id="@+id/add_place_icon"
-                android:layout_width="45dp"
-                android:layout_height="45dp"
-                android:layout_alignParentStart="true"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="20dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="15dp"
+
                 android:src="@drawable/pluse" />
 
             <TextView
                 android:id="@+id/add_place_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
+                android:layout_marginStart="٣٢dp"
+                android:layout_marginLeft="20dp"
                 android:layout_toEndOf="@id/add_place_icon"
                 android:text="Add a place"
                 android:textColor="@color/lightGray"
@@ -223,11 +238,12 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/add_place_icon"
                 android:layout_alignStart="@id/add_place_text"
+                android:layout_marginStart="-٢dp"
+                android:layout_marginTop="-٣٢dp"
                 android:text="Connect to cloud storage"
                 android:textColor="#A3A0A0"
                 android:textSize="18sp" />
         </RelativeLayout>
-
 
 
     </RelativeLayout>
@@ -270,6 +286,7 @@
         <RelativeLayout
             android:id="@+id/sharedLeft_section"
             android:layout_width="wrap_content"
+            android:layout_marginLeft="15dp"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_centerVertical="true">
@@ -312,6 +329,7 @@
                 android:layout_below="@id/openRight_icon"
                 android:layout_centerHorizontal="true"
                 android:text="Open"
+                android:layout_marginRight="15dp"
                 android:textColor="#FFFFFF"
                 android:textSize="18sp" />
         </RelativeLayout>
